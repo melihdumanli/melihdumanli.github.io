@@ -399,21 +399,22 @@ fieldset {
 
 /* Slide Background Image */
 #slider .slide1 {
-    background-image: url(../img/slider/01.jpg);
-    background-size: cover;
+    background-image: url(../img/slider/predator.webp);
+    background-size: contain;
+    object-fit: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #slider .slide2 {
-    background-image: url(../img/slider/02.jpg);
+    background-image: url(../img/slider/slider-bg-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #slider .slide3 {
-    background-image: url(../img/slider/03.jpg);
+    background-image: url(../img/slider/slider-bg-3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -949,7 +950,7 @@ fieldset {
 .fun-facts-area{
     background-color: #888;
     color: #fff;
-    background-image: url(../img/bg/fun-bg.jpg);
+    background-image: url(../img/bg/library.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -1231,6 +1232,7 @@ fieldset {
     clear: both;
     overflow: hidden;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .news-meta span {
@@ -1250,7 +1252,6 @@ fieldset {
     box-shadow: none;
     border: none;
     min-height: 100%;
-    padding: 100px 0;
 }
 
 .news-modal .modal-content h2 {
@@ -1306,6 +1307,12 @@ fieldset {
 .news-modal .modal-backdrop {
     opacity: 0;
     display: none
+}
+
+.news-modal .button-container {
+    display: flex;
+    justify-content: end;
+    padding-top: 50px;
 }
 
 
