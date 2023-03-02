@@ -161,6 +161,10 @@ fieldset {
     padding: 80px 0px;
 }
 
+.section-xl {
+    padding: 100px 0px;
+}
+
 .section-small {
     padding: 50px 0px;
 }
@@ -511,7 +515,7 @@ fieldset {
 *                                   06. Service area css
 * --------------------------------------------------------------------------------------- */
 
-.service-area {
+.products-area {
     background-color: #f5f5f5;
 }
 
@@ -584,6 +588,13 @@ fieldset {
     opacity: 1;
     filter: alpha(opacity=100);
     margin-left: 0%
+}
+
+.navigator {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -1204,48 +1215,55 @@ fieldset {
 .news-area {
     /*background-color: #f5f5f5;*/
 }
-.single-news {
+.single-product {
     transition: 0.3s ease-out;
     background-color: #fff;
     margin: 0 15px;
 }
 
-.news-image img {
-    width: 100%;
+.product-image img {
+    position: relative;
+    width: 235px;
+    height: 275px;
+    object-fit: contain;
 }
-.news-content {
-    padding: 15px 0;
+
+.product-content {
+    padding: 15px 10px;
 }
-.news-content .subtitle {
+.product-content .subtitle {
     margin-top: 0px;
     text-transform: inherit;
     line-height: 28px;
 }
-.news-content .subtitle i.fa {
+.product-content .subtitle i.fa {
     color: #00bcc6;
 }
-.news-content .btn {
+.product-content .btn {
     margin-top: 10px;
 }
-.news-meta {
+.product-header {
+    text-align: left;
+}
+.product-meta {
     display: block;
     clear: both;
     overflow: hidden;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
-.news-meta span {
+.product-meta span {
     float: left;
     margin-right: 15px;
 }
 
-.news-meta span i.fa {
+.product-meta span i.fa {
     margin-right: 4px;
 }
 
 /* news Modal css */
-.news-modal .modal-content {
+.product-modal .modal-content {
     border-radius: 0;
     background-clip: border-box;
     -webkit-box-shadow: none;
@@ -1254,22 +1272,22 @@ fieldset {
     min-height: 100%;
 }
 
-.news-modal .modal-content h2 {
+.product-modal .modal-content h2 {
     margin-bottom: 30px;
     line-height: 40px;
 }
 
-.news-modal .modal-content img {
+.product-modal .modal-content img {
     margin-bottom: 30px;
     width: 100%;
     height: auto;
 }
 
-.news-modal .modal-content .item-details {
+.product-modal .modal-content .item-details {
     margin: 30px 0
 }
 
-.news-modal .close-modal {
+.product-modal .close-modal {
     position: absolute;
     width: 75px;
     height: 75px;
@@ -1279,11 +1297,11 @@ fieldset {
     cursor: pointer
 }
 
-.news-modal .close-modal:hover {
+.product-modal .close-modal:hover {
     opacity: .3
 }
 
-.news-modal .close-modal .lr {
+.product-modal .close-modal .lr {
     height: 75px;
     width: 1px;
     margin-left: 35px;
@@ -1294,7 +1312,7 @@ fieldset {
     z-index: 1051
 }
 
-.news-modal .close-modal .lr .rl {
+.product-modal .close-modal .lr .rl {
     height: 75px;
     width: 1px;
     background-color: #2C3E50;
@@ -1304,12 +1322,12 @@ fieldset {
     z-index: 1052
 }
 
-.news-modal .modal-backdrop {
+.product-modal .modal-backdrop {
     opacity: 0;
     display: none
 }
 
-.news-modal .button-container {
+.product-modal .button-container {
     display: flex;
     justify-content: end;
     padding-top: 50px;
