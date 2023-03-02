@@ -1270,6 +1270,11 @@ fieldset {
 .product-content .btn {
     margin-top: 10px;
 }
+
+.product-content hr {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .product-header {
     text-align: left;
 }
