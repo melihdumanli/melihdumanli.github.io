@@ -189,6 +189,7 @@ fieldset {
 
 .section-title p {
     margin-top: 25px;
+    font-size: 20px;
 }
 
 
@@ -306,6 +307,11 @@ fieldset {
     min-height: 400px;
 }
 
+#slider {
+    display: flex;
+    justify-content: center;
+}
+
 #slider .main-container {
   padding: 0;
 }
@@ -356,6 +362,10 @@ fieldset {
   z-index: 2;
 }
 
+.carousel-fade {
+    width: 70%;
+}
+
 .right.carousel-control img,
 .left.carousel-control img {
     position: absolute;
@@ -390,6 +400,7 @@ fieldset {
 .intro-text h2 {
     font-size: 30px;
     color: #fff;
+    margin-bottom: 30px;
 }
 
 .intro-text h1 {
@@ -398,12 +409,11 @@ fieldset {
     font-weight: 600;
     margin-top: 0px;
     line-height: 70px;
-    margin-bottom: 30px;
 }
 
 /* Slide Background Image */
 #slider .slide1 {
-    background-image: url(../img/slider/predator.webp);
+    background-image: url(../img/slider/dinamik_seri.webp);
     background-size: contain;
     object-fit: contain;
     background-repeat: no-repeat;
@@ -418,7 +428,7 @@ fieldset {
 }
 
 #slider .slide3 {
-    background-image: url(../img/slider/slider-bg-3.jpg);
+    background-image: url(../img/slider/export.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -460,16 +470,21 @@ fieldset {
 /* Tab css */
 
 .skills {
-    padding-left: 0;
     padding-top: 45px;
 }
-.nav-tabs {}
-.nav-tabs li {}
+
 .nav-tabs li a {
     color: #fff;
     background-color: #00bcc6;
     border-radius: 0px;
 }
+
+@media(max-width: 401px) {
+    .nav-tabs li {
+        width: 33%;
+    }
+}
+
 .nav-tabs li a:hover {
     color: inherit;
 }

@@ -57,12 +57,12 @@
                             <div class="navbar-collapse collapse">
                                 <nav>
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li><a class="smooth_scroll" href="#slider">ANASAYFA</a></li>
-                                        <li><a class="smooth_scroll" href="index.html">HAKKIMIZDA</a></li>
-                                        <li><a class="smooth_scroll" href="index.html">YAYINEVLERİ</a></li>
+                                        <li><a href="index.html">ANASAYFA</a></li>
+                                        <li><a href="index.html">HAKKIMIZDA</a></li>
+                                        <li><a href="index.html">YAYINEVLERİ</a></li>
                                         <li class="active"><a class="smooth_scroll" href="yayinlar.html">YAYINLAR</a></li>
-                                        <li><a class="smooth_scroll" href="index.html">YENİ ÜRÜNLER</a></li>
-                                        <li><a class="smooth_scroll" href="index.html">İLETİŞİM</a></li>
+                                        <li><a href="index.html">YENİ ÜRÜNLER</a></li>
+                                        <li><a href="index.html">İLETİŞİM</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -78,7 +78,7 @@
             <aside class="col-lg-3">
                 <div class="categories">
                     <p class="header">Kategoriler</p>
-                    <div class="options">
+                    <div id="options">
                         <div class="form-check" onclick="filterProducts()">
                             <input class="form-check-input" type="checkbox" value="2" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
@@ -171,6 +171,10 @@
                             </label>
                         </div>
                     </div>
+                    <div id="show-all" onclick="widenCategories()">
+                        <i class="fa fa-angle-double-down"></i>
+                        <p>Tümünü Göster</p>
+                    </div>
                 </div>
                 <div class="filters">
                     <p class="header">
@@ -207,7 +211,7 @@
                 </div>
                 <div class="content">
                     <div class="row">
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-ayt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/ayt_6+1_deneme.webp" alt="">
                             </div>
@@ -215,6 +219,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>AYT 6+1 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -227,7 +234,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-lgs" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/lgs 5+1 deneme.webp" alt="">
                             </div>
@@ -235,6 +242,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>LGS 5+1 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -247,7 +257,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-lgs" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/lgs 7+1 deneme.webp" alt="">
                             </div>
@@ -255,6 +265,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>LGS 7+1 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -269,7 +282,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-lgs" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/lgs_paragraf.webp" alt="">
                             </div>
@@ -277,6 +290,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>LGS Paragraf 20 Yayın 20 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -289,7 +305,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-tyt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/tyt 3+2 deneme.webp" alt="">
                             </div>
@@ -309,7 +325,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-tyt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/tyt 7+1 deneme.webp" alt="">
                             </div>
@@ -317,6 +333,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>TYT 7+1 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -331,7 +350,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-tyt-ayt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/tyt_ayt_4+4_deneme.webp" alt="">
                             </div>
@@ -339,6 +358,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>TYT-AYT 4+4 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -351,7 +373,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-tyt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/tyt_dil_bilgisi.webp" alt="">
                             </div>
@@ -359,6 +381,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>TYT Dil Bilgisi 20 Yayın 40 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -371,7 +396,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-tyt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/tyt_fen_bilimleri_15_deneme.webp" alt="">
                             </div>
@@ -379,6 +404,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>TYT Fen Bilimleri 15 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -393,7 +421,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-tyt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <a href="#product-modal-1" data-toggle="modal">
                                     <img src="assets/img/liderler_karmasi/tyt_matematik_12_deneme.webp" alt="">
@@ -403,6 +431,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>TYT Matematik 12 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -415,7 +446,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-tyt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/tyt_paragraf.webp" alt="">
                             </div>
@@ -423,6 +454,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>TYT Paragraf 15 Yayın 30 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -435,7 +469,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-tyt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/tyt_problemler.webp" alt="">
                             </div>
@@ -443,6 +477,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>TYT Problemler 15 Yayın 47 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -457,7 +494,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-tyt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/tyt_sosya_bilimler_15_deneme.webp" alt="">
                             </div>
@@ -465,6 +502,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>TYT Sosyal Bilimler 15 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -477,7 +517,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="lider-tyt" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/liderler_karmasi/tyt_turkce_12_deneme.webp" alt="">
                             </div>
@@ -485,6 +525,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>TYT Türkçe 12 Deneme</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Liderler Karması
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -497,7 +540,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="kurul" class="single-product col-lg-4">
+                        <div id="kurul-2" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/kurul/tum_dersler_2_soru_fasikul.jpg" alt="">
                             </div>
@@ -505,6 +548,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>2. Sınıf Tüm Dersler Soru Fasikülleri</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Kurul Yayınları
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -519,7 +565,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div id="kurul" class="single-product col-lg-4">
+                        <div id="kurul-3" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/kurul/tum_dersler_3_soru_fasikul.jpg" alt="">
                             </div>
@@ -529,6 +575,9 @@
                                     <b>3. Sınıf Tüm Dersler Soru Fasikülleri</b>
                                 </p>
                                 <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Kurul Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
                                 </p>
                                 <p class="product-meta text-muted">
@@ -539,7 +588,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="kurul" class="single-product col-lg-4">
+                        <div id="kurul-4" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/kurul/tum_dersler_4_soru_fasikul.jpg" alt="">
                             </div>
@@ -549,6 +598,9 @@
                                     <b>4. Sınıf Tüm Dersler Soru Fasikülleri</b>
                                 </p>
                                 <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Kurul Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
                                 </p>
                                 <p class="product-meta text-muted">
@@ -559,7 +611,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="kurul" class="single-product col-lg-4">
+                        <div id="kurul-5" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/kurul/tum_dersler_5_soru_fasikul.jpg" alt="">
                             </div>
@@ -569,6 +621,9 @@
                                     <b>5. Sınıf Tüm Dersler Soru Fasikülleri</b>
                                 </p>
                                 <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Kurul Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
                                 </p>
                                 <p class="product-meta text-muted">
@@ -581,7 +636,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div id="kurul" class="single-product col-lg-4">
+                        <div id="kurul-6" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/kurul/tum_dersler_6_soru_fasikul.jpg" alt="">
                             </div>
@@ -591,6 +646,9 @@
                                     <b>6. Sınıf Tüm Dersler Soru Fasikülleri</b>
                                 </p>
                                 <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Kurul Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
                                 </p>
                                 <p class="product-meta text-muted">
@@ -601,7 +659,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="kurul" class="single-product col-lg-4">
+                        <div id="kurul-7" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/kurul/tum_dersler_7_soru_fasikul.jpg" alt="">
                             </div>
@@ -611,6 +669,9 @@
                                     <b>7. Sınıf Tüm Dersler Soru Fasikülleri</b>
                                 </p>
                                 <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Kurul Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
                                 </p>
                                 <p class="product-meta text-muted">
@@ -621,7 +682,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="kurul" class="single-product col-lg-4">
+                        <div id="kurul-8" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/kurul/tum_dersler_8_soru_bankasi.jpg" alt="">
                             </div>
@@ -629,6 +690,9 @@
                                 <hr>
                                 <p class="product-header">
                                     <b>8. Sınıf Tüm Dersler Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Kurul Yayınları
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
@@ -643,7 +707,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div id="kurul" class="single-product col-lg-4">
+                        <div id="kurul-8" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
                                 <img src="assets/img/kurul/paragraf_soru_bankasi_8.jpg" alt="">
                             </div>
@@ -653,6 +717,9 @@
                                     <b>8. Sınıf Paragraf Soru Bankası</b>
                                 </p>
                                 <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Kurul Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
                                 </p>
                                 <p class="product-meta text-muted">
@@ -663,50 +730,765 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="lider" class="single-product col-lg-4">
+                        <div id="dinamo-5" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
-                                <img src="assets/img/liderler_karmasi/tyt_turkce_12_deneme.webp" alt="">
+                                <img src="assets/img/dinamo/5-sinif-tÜrkÇe-3d-1000x1000h.webp" alt="">
                             </div>
                             <div class="product-content">
                                 <hr>
                                 <p class="product-header">
-                                    <b>TYT Türkçe 12 Deneme</b>
+                                    <b>5. Sınıf Türkçe Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
                                 </p>
                                 <p class="product-meta text-muted">
-                                    <b>Ebat: </b> 21x27.5 cm
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 208
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-5" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/5-sinif-sosyal-3d-1000x1000h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>5. Sınıf Sosyal Bilgiler Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Sayfa: </b> 176
                                 </p>
                             </div>
                         </div>
-                        <div id="kurul" class="single-product col-lg-4">
+                    </div>
+                    <div class="row">
+                        <div id="dinamo-5" class="single-product col-lg-4 col-md-4 col-sm-12">
                             <div class="product-image">
-                                <img src="assets/img/kurul/tum_dersler_2_soru_fasikul.jpg" alt="">
+                                <img src="assets/img/dinamo/" alt="">
                             </div>
                             <div class="product-content">
                                 <hr>
                                 <p class="product-header">
-                                    <b>2. Sınıf Tüm Dersler Soru Fasikülleri</b>
+                                    <b>5. Sınıf Paragraf Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
                                 </p>
                                 <p class="product-meta text-muted">
                                     <b>Basım: </b> 2023
                                 </p>
                                 <p class="product-meta text-muted">
-                                    <b>Ebat: </b> -
+                                    <b>Ebat: </b> 19x27 cm
                                 </p>
                                 <p class="product-meta text-muted">
-                                    <b>Sayfa: </b> -
+                                    <b>Sayfa: </b> 176
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-5" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/5-sinif-matematİk-3d-1000x1000h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>5. Sınıf Matematik Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 208
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-5" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/5-sinif-İngİlİzce-3d-1000x1000h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>5. Sınıf İngilizce Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 176
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="dinamo-5" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/5-sinif-fen-3d-1000x1000h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>5. Sınıf Fen Bilimleri Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 264
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-5" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/5-sinif-dİn-3d-1000x1000h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>5. Sınıf Din Kültürü ve Ahlak Bilgisi Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 160
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-6" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/6.-sınf-tÜrkÇe-3d-500x500h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>6. Sınıf Türkçe Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 220
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="dinamo-6" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/6.-sınf-matematİk-3d-500x500h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>6. Sınıf Matematik Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 208
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-6" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/6.-sınf-fen-3d-500x500h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>6. Sınıf Fen Bilimleri Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 264
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-6" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/6.-sınf-İngİlİzce-3d-500x500h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>6. Sınıf İngilizce Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 176
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="dinamo-6" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/6.-sınf-sosyal-3d-500x500h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>6. Sınıf Sosyal Bilgiler Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 168
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-6" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/6.-sınf-dİn-3d-500x500h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>6. Sınıf Din Kültürü ve Ahlak Bilgisi Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 144
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-6" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/6.-sınf-paragraf-3d-500x500h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>6. Sınıf Paragraf Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 176
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="dinamo-7" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/7. sınıf türkçe.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>7. Sınıf Türkçe Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 208
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-7" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/7. sınıf matematik.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>7. Sınıf Matematik Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 216
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-7" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/7. sınıf fen bilimleri-500x500h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>7. Sınıf Fen Bilimleri Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 152
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="dinamo-7" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/7. sınıf ingilizce-500x500h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>7. Sınıf İngilizce Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 160
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-7" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/7. sınıf sosyal bilgiler.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>7. Sınıf Sosyal Bilgiler Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 216
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-7" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/7.-sınıf-din-500x500h.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>7. Sınıf Din Kültürü ve Ahlak Bilgisi Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 180
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="dinamo-7" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/7. sınıf paragraf.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>7. Sınıf Paragraf Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 200
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/8. sınıf türkçe.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf Türkçe Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 232
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf Matematik Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 216
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/8. sınıf fen.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf Fen Bilimleri Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 168
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/8. sınıf ingilizce.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf İngilizce Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 168
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/8. sınıf inkılap tarihi.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf T.C. İnkılap Tarihi ve Atatürkçülük Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 208
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/8. sınıf din kültürü.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf Din Kültürü ve Ahlak Bilgisi Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 176
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/8. sınıf paragraf.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf Paragraf Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 240
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/8. predator-fen-bİlİmlerİ-500x500w.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf Predator Fen Bilimleri Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 208
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/8. predator-matematİk-500x500w.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf Predator Matematik Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 224
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/8. predator-tÜrkÇe-500x500w.webp" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf Predator Türkçe Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 280
+                                </p>
+                            </div>
+                        </div>
+                        <div id="dinamo-8" class="single-product col-lg-4 col-md-4 col-sm-12">
+                            <div class="product-image">
+                                <img src="assets/img/dinamo/" alt="">
+                            </div>
+                            <div class="product-content">
+                                <hr>
+                                <p class="product-header">
+                                    <b>8. Sınıf Predator Fen Bilimleri Soru Bankası</b>
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Yayınevi: </b> Dinamo Yayınları
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Basım: </b> 2023
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Ebat: </b> 19x27 cm
+                                </p>
+                                <p class="product-meta text-muted">
+                                    <b>Sayfa: </b> 208
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="selected-content">
-
                 </div>
             </div>
         </div>
@@ -805,15 +1587,15 @@
             const categoryCheckboxes = document.querySelectorAll('.categories input[type=checkbox]');
             const publisherCheckboxes = document.querySelectorAll('.filters input[type=checkbox]');
             const products = document.querySelectorAll('.single-product');
+            const node = document.querySelector('.selected-content');
+            const content = document.querySelector('.content');
+
+            while (node.firstChild) {
+                node.removeChild(node.lastChild);
+            }
 
             let selections = [];
             let selectedProducts = [];
-
-            categoryCheckboxes.forEach(function (checkbox) {
-                if (checkbox.checked) {
-                    selections.push(checkbox.value);
-                }
-            });
 
             publisherCheckboxes.forEach(function (checkbox) {
                 if (checkbox.checked) {
@@ -821,17 +1603,55 @@
                 }
             });
 
+            if (selections.length > 0) {
+                categoryCheckboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        selections.forEach(function (selection) {
+                            selection.concat('-', checkbox.value)
+                        })
+                    }
+                })
+            } else {
+                categoryCheckboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        selections.push(checkbox.value);
+                    }
+                })
+            }
+
+            if (selections.length < 1) {
+                content.style.display = "block"
+                node.style.display = "none"
+                return
+            }
+
             products.forEach(function (product) {
+                let cloneNode = product.cloneNode(true)
                 let filterValue = product.getAttribute('id');
                 selections.forEach(function (selection) {
                     if (filterValue.includes(selection)) {
-                        selectedProducts.push(product)
+                        selectedProducts.push(cloneNode)
                     }
                 });
             });
 
-            debugger
+            if (selectedProducts.length > 0) {
+                let childNode;
+                selectedProducts.forEach(function (product, index) {
+                    if (index % 3 === 0) {
+                        childNode = document.createElement('div');
+                        childNode.classList.add('row')
+                        node.appendChild(childNode)
+                    }
+                    childNode.appendChild(product)
+                });
+                content.style.display = "none";
+            }
+        }
 
+        function widenCategories() {
+            document.getElementById('options').style.height = "auto"
+            document.getElementById('show-all').style.display = "none"
         }
 
     </script>
