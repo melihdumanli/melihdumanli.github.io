@@ -366,6 +366,12 @@ fieldset {
     width: 70%;
 }
 
+@media(max-width: 401px) {
+    .carousel-fade {
+        width: 100%;
+    }
+}
+
 .right.carousel-control img,
 .left.carousel-control img {
     position: absolute;
