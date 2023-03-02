@@ -1,0 +1,120 @@
+.navbar-nav li a {
+  color: #00bcc6;
+}
+
+.mainmenu .navbar-nav li.active a {
+  color: #8d8d8d;
+}
+
+/* ----------------------------------------------------------------------------------------
+*                                   21. Products css
+* --------------------------------------------------------------------------------------- */
+
+aside {
+  margin-bottom: 50px;
+}
+
+.categories, .filters {
+  background: #fff;
+  box-shadow: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+}
+
+.filters {
+  margin-top: 20px;
+}
+
+.categories .header,
+.filters .header {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.categories ul {
+  list-style-type: none;
+}
+
+.categories ul li {
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.categories ul li:hover {
+  color: #00bcc6;
+}
+
+.options {
+  height: 150px;
+  overflow: scroll;
+  padding-left: 5px;
+}
+
+.filter-item label,
+.options label {
+  font-size: 18px;
+  padding-left: 0;
+}
+
+.filter-item [type=checkbox],
+.options [type=checkbox] {
+  margin-top: 10px;
+  padding-right: 10px;
+  -ms-transform: scale(1.25); /* IE */
+  -moz-transform: scale(1.25); /* FF */
+  -webkit-transform: scale(1.25); /* Safari and Chrome */
+  -o-transform: scale(1.25); /* Opera */
+}
+
+.form-check-label {
+  font-weight: 400;
+  padding-left: 10px !important;
+}
+
+.content-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#content-title {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  width: 100%;
+  box-shadow: 0px 8px 10px -10px #111;
+  background-color: #fff;
+}
+
+#content-title p {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.content, .selected-content {
+  margin-top: 30px;
+}
+
+.content .row,
+.selected-content .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-product {
+  margin-bottom: 30px;
+}
+
+.product-image {
+  transition: transform .2s;
+}
+
+.product-image img{
+  position: relative;
+  width: 235px;
+  height: 275px;
+  object-fit: contain;
+}
+
+.product-image:hover {
+  transform: scale(1.75);
+}
