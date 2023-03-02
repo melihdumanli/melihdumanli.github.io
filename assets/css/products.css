@@ -112,6 +112,18 @@ aside {
   font-weight: 600;
 }
 
+.content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
+}
+
+@media(max-width: 401px) {
+  .content {
+    grid-template-columns: auto auto;
+  }
+}
+
 .content, .selected-content {
   margin-top: 30px;
 }
@@ -129,22 +141,11 @@ aside {
   }
 }
 
-.single-product {
-  margin-bottom: 30px;
-}
-
 .product-image {
   transition: transform .2s;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.product-image img{
-  position: relative;
-  width: 235px;
-  height: 275px;
-  object-fit: contain;
 }
 
 .product-image:hover {
