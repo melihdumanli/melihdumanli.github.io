@@ -579,19 +579,9 @@ nav {
     background-color: #00bcc6;
 }
 
-
-
-
-
-
 /* ----------------------------------------------------------------------------------------
 *                                   06. Service area css
 * --------------------------------------------------------------------------------------- */
-
-.products-area {
-    background-color: #f5f5f5;
-}
-
 .home-services .service-box {
     -webkit-transform: translateZ(0);
     text-align: center;
@@ -716,6 +706,10 @@ nav {
 .publisher{
     text-align: center;
     transition: 0.3s ease-out;
+    border-radius: 10px 10px 50px 10px;
+    padding: 10px;
+    overflow: hidden;
+    background: #fff;
 }
 
 .publisher-image{
@@ -1283,7 +1277,8 @@ nav {
 *                                   16. News area css
 * --------------------------------------------------------------------------------------- */
 
-.news-area,
+.products-area,
+.team-area,
 .contact-area,
 .contact-area textarea,
 .contact-area input[type="text"],
@@ -1598,22 +1593,6 @@ nav {
 }
 
 
-
-
-
-/* ----------------------------------------------------------------------------------------
-*                                   19. Google Map area css
-* --------------------------------------------------------------------------------------- */
-.map {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
-
 /* ----------------------------------------------------------------------------------------
 *                                   20. Footer area css
 * --------------------------------------------------------------------------------------- */
@@ -1636,21 +1615,15 @@ nav {
     margin-right: 10px;
 }
 
-.social-links li a i {
-    color: #fff;
-    border: 1px solid #fff;
-    width: 40px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
+.social-links li a:hover img {
+    color: #222;
     transition: 0.3s;
     -moz-transition: 0.3s;
     -webkit-transition: 0.3s;
-}
-
-.social-links li a:hover i {
-    color: #222;
-    background-color: #fff;
+    -ms-transform: scale(1.25); /* IE */
+    -moz-transform: scale(1.25); /* FF */
+    -webkit-transform: scale(1.25); /* Safari and Chrome */
+    -o-transform: scale(1.25); /* Opera */
 }
 
 @media (max-width: 767px) {

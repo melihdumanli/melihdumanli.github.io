@@ -59,6 +59,14 @@
 
   $(document).ready(function () {
 
+    $('#grid').click(function () {
+      $('.content').css('display', 'grid');
+    });
+
+    $('#list').click(function () {
+      $('.content').css('display', 'block');
+    });
+
 
 
     /*-------------------------------------------------------------------------*
@@ -89,8 +97,6 @@
       target: '.navbar-collapse',
       offset: 195
     });
-
-
 
     /*-------------------------------------------------------------------------*
      *                   04. Smooth scroll to anchor                           *
@@ -170,38 +176,6 @@
 
     });
 
-
-
-    /*-------------------------------------------------------------------------*
-     *                  07. Testimonial js                                     *
-     *-------------------------------------------------------------------------*/
-    $(".testimonial-list").owlCarousel({
-      transitionStyle: "goDown",
-      singleItem: true,
-      lazyLoad: false,
-      pagination: false,
-      navigation: false,
-      autoPlay: true,
-    });
-
-
-
-    /*-------------------------------------------------------------------------*
-     *                       08. client js                                     *
-     *-------------------------------------------------------------------------*/
-    $(".owl-client").owlCarousel({
-      items: 5,
-      autoPlay: true,
-      itemsDesktop: [1199, 5],
-      itemsDesktopSmall: [980, 4],
-      itemsTablet: [768, 3],
-      itemsMobile: [479, 2],
-      pagination: false,
-      navigation: false,
-      autoHeight: true,
-    });
-
-
     $(".home-services").owlCarousel({
       items: 4,
       autoPlay: true,
@@ -213,7 +187,6 @@
       navigation: false,
       autoHeight: true,
     });
-
 
     $(".project-carousel").owlCarousel({
       items: 4,
@@ -227,7 +200,6 @@
       autoHeight: true,
     });
 
-
     $(".news-carousel").owlCarousel({
       items: 3,
       autoPlay: true,
@@ -238,20 +210,6 @@
       pagination: false,
       navigation: false,
       autoHeight: true,
-    });
-
-
-    $(".slide-carousel").owlCarousel({
-      items: 1,
-      autoPlay: true,
-      itemsDesktop: [1199, 1],
-      itemsDesktopSmall: [980, 1],
-      itemsTablet: [768, 1],
-      itemsMobile: [479, 1],
-      pagination: false,
-      navigation: true,
-      autoHeight: true,
-      navigationText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>']
     });
 
 
@@ -330,19 +288,6 @@
         $('.mailchimp-error').html('' + resp.msg).fadeIn(900);
       }
     }
-
-
-    // $('input[type="checkbox"]').click(function () {
-    //   var value = $(this).val();
-    //   if (this.checked) {
-    //     $('.container #' + value).show();
-    //     $('.container .row > div:not(#' + value + ')').hide();
-    //   } else {
-    //     $('.container #' + value).hide();
-    //     $('.container .row > div').show();
-    //   }
-    // });
-
 
   }); // $(document).ready end
 
