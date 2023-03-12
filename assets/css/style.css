@@ -1,67 +1,3 @@
-/* ----------------------------------------------------------------------------------------
-* Author        : web_bean
-* Template Name : BIZNIZ | One Page Corporate Html Template
-* File          : BIZNIZ  main CSS file
-* Version       : 1.0
-* ---------------------------------------------------------------------------------------- */
-
-
-
-
-
-/* INDEX
-----------------------------------------------------------------------------------------
-
-01. General css
-
-02. Navigation area css
-
-03. Slider area css
-
-04. About area css
-
-05. Skills area css
-
-06. Service area css
-
-07. Portfolio/work area css
-
-08. Team Area Css
-
-09. Testimonial area css
-
-10. Features area css
-
-11. Action area css
-
-12. Pricing area css
-
-13. Fun facts area css
-
-14. Why Choose area css
-
-15. Subscribe area css
-
-16. News area css
-
-17. Client area css
-
-18. Contact area css
-
-19. Google Map area css
-
-20. Footer area css
-
--------------------------------------------------------------------------------------- */
-
-
-
-
-
-/* ----------------------------------------------------------------------------------------
-*                                       01. General css
-* -------------------------------------------------------------------------------------- */
-
 html,
 body {
     height: 100%
@@ -158,7 +94,7 @@ fieldset {
 }
 
 .section-big {
-    padding: 80px 0px;
+    padding: 40px 0px;
 }
 
 .section-xl {
@@ -172,7 +108,7 @@ fieldset {
 .section-title {
     margin: auto;
     max-width: 800px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .section-title.white h2 {
@@ -191,9 +127,6 @@ fieldset {
     margin-top: 25px;
     font-size: 20px;
 }
-
-
-/* preloader css */
 
 #preloader {
     position: fixed;
@@ -222,7 +155,12 @@ fieldset {
     vertical-align: middle;
 }
 
-
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1300px;
+        width: 100%;
+    }
+}
 
 
 
@@ -252,9 +190,12 @@ fieldset {
 }
 
 .navbar-brand {
-    display: block;
     padding: 0;
-    height: 64px;
+    height: 110px;
+}
+
+.logo {
+    width: 110px;
 }
 
 .navbar-nav  li {
@@ -262,15 +203,53 @@ fieldset {
     display: inline-block;
 }
 
+.navbar-nav .fa-phone {
+    padding-right: 10px;
+}
+
+.navbar-header {
+    display: flex;
+}
+
+.navbar-nav .dropdown-menu li {
+    display: block;
+}
+
+.dropdown-toggle {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
 .navbar-nav li a {
-    color: #fff;
+    color: #333;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: 1px;
+}
+
+.navbar-collapse {
+    padding-right: 15px;
+}
+
+.navbar-fixed-top {
+    background-color: #fff;
 }
 
 .sticky-menu .navbar-nav li a {
     color: #333;
+}
+
+.sticky-menu .dropdown_button p,
+.sticky-menu .dropdown_button i {
+    color: #333;
+}
+
+.sticky-menu .dropdown_content {
+    background-color: #fff;
+}
+
+.sticky-menu .dropdown_content a:hover {
+    color: #00bcc6;
 }
 
 .nav > li > a:hover,
@@ -279,18 +258,78 @@ fieldset {
     background: none;
 }
 
-.mainmenu .navbar-nav li.active a {
+nav {
+    display: flex;
+    align-items: center;
+}
+
+@media(min-width:401px) {
+    nav {
+        height: 110px;
+        justify-content: flex-end;
+    }
+}
+
+.mainmenu .navbar-nav li.active a,
+.nav > li > a:hover {
     color: #00bcc6;
 }
 
-.logo {
-    width: 64px;
+@media only screen and (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .navbar-right .dropdown-menu {
+        left: 0;
+        right: auto;
+    }
+  }
+
+.invisible {
+    opacity: 0;
+} 
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 8px 10px -10px #111;
 }
 
+.dropdown-menu li a {
+    color: #333;
+    padding: 10px 15px 10px 25px !important;
+}
+
+.dropdown-menu li a:hover {
+    color: #00bcc6;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.dropdown .caret {
+    transition: .3s ease-in-out;
+}
+
+.dropdown.open .caret {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition: .3s ease-in-out;
+}
+
+.open>.dropdown-menu {
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+}
 
 /* Mobile Nav css */
 .navbar-toggle .icon-bar {
     background: #00bcc6;
+    width: 30px;
+}
+
+.navbar-toggle {
+    position: absolute;
+    left: 300px;
+    top: 30px;
 }
 
 
@@ -310,6 +349,14 @@ fieldset {
 #slider {
     display: flex;
     justify-content: center;
+    height: 650px;
+    margin-top: 120px;
+}
+
+@media(max-width: 401px) {
+    #slider {
+        height: 400px;
+    }
 }
 
 #slider .main-container {
@@ -363,7 +410,7 @@ fieldset {
 }
 
 .carousel-fade {
-    width: 70%;
+    width: 100%;
 }
 
 @media(max-width: 401px) {
@@ -457,6 +504,11 @@ fieldset {
     width: 100%;
 }
 
+.about-text,
+.tab-pane p {
+    text-align: justify;
+}
+
 .about-text h3 {
     margin-top: 10px;
 }
@@ -527,19 +579,9 @@ fieldset {
     background-color: #00bcc6;
 }
 
-
-
-
-
-
 /* ----------------------------------------------------------------------------------------
 *                                   06. Service area css
 * --------------------------------------------------------------------------------------- */
-
-.products-area {
-    background-color: #f5f5f5;
-}
-
 .home-services .service-box {
     -webkit-transform: translateZ(0);
     text-align: center;
@@ -612,7 +654,7 @@ fieldset {
 }
 
 .navigator {
-    margin-top: 50px;
+    margin-top: 25px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -664,6 +706,10 @@ fieldset {
 .publisher{
     text-align: center;
     transition: 0.3s ease-out;
+    border-radius: 10px 10px 50px 10px;
+    padding: 10px;
+    overflow: hidden;
+    background: #fff;
 }
 
 .publisher-image{
@@ -675,7 +721,7 @@ fieldset {
 
 .publisher-image img{
     width: 100%;
-    height: 265px;
+    height: 200px;
     padding-bottom: 2px;
     object-fit: contain;
 }
@@ -1227,19 +1273,49 @@ fieldset {
     color: red;
 }
 
-
-
-
 /* ----------------------------------------------------------------------------------------
 *                                   16. News area css
 * --------------------------------------------------------------------------------------- */
-.news-area {
-    /*background-color: #f5f5f5;*/
+
+.products-area,
+.team-area,
+.contact-area,
+.contact-area textarea,
+.contact-area input[type="text"],
+.contact-area input[type="email"] {
+    background-color: #f5f5f5;
 }
+
 .single-product {
     transition: 0.3s ease-out;
     background-color: #fff;
-    margin-bottom: 20px;
+    margin: 10px;
+    border: rgba(0, 188, 188, 0.4) 1px solid;
+    border-radius: 10px 10px 50px 10px;
+    box-shadow: 0px 3px 4.7px 0.3px rgba(0, 188, 188, 0.24);
+}
+
+.product-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .product-image img:hover {
+    transition: transform .2s;
+    transform: scale(1.5);
+  }
+  
+  @media(max-width: 401px) {
+    .product-image img:hover {
+      transform: scale(1);
+    }
+  }
+
+@media(max-width: 401px) {
+    .single-product {
+        border-radius: 10px 10px 30px 10px;
+    }
 }
 
 .product-image img {
@@ -1251,7 +1327,7 @@ fieldset {
 
 @media(max-width: 401px) {
     .product-image img {
-        width: 165px;
+        width: 100%;
         height: 175px;
     }
 }
@@ -1281,15 +1357,24 @@ fieldset {
     margin-top: 0;
     margin-bottom: 0;
 }
-.product-header {
-    text-align: left;
+.product-header,
+.product-meta {
+    text-align: center;
 }
 .product-meta {
     display: block;
     clear: both;
     overflow: hidden;
     margin-bottom: 0;
-    text-align: left;
+}
+
+@media (max-width: 401px) {
+    .product-meta {
+        display: none;
+    }
+    .product-header {
+        text-align: center;
+    }
 }
 
 .product-meta span {
@@ -1508,21 +1593,6 @@ fieldset {
 }
 
 
-
-
-
-/* ----------------------------------------------------------------------------------------
-*                                   19. Google Map area css
-* --------------------------------------------------------------------------------------- */
-#contactgoogleMap {
-    width: 100%;
-    height: 400px;
-}
-
-
-
-
-
 /* ----------------------------------------------------------------------------------------
 *                                   20. Footer area css
 * --------------------------------------------------------------------------------------- */
@@ -1545,21 +1615,15 @@ fieldset {
     margin-right: 10px;
 }
 
-.social-links li a i {
-    color: #fff;
-    border: 1px solid #fff;
-    width: 40px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
+.social-links li a:hover img {
+    color: #222;
     transition: 0.3s;
     -moz-transition: 0.3s;
     -webkit-transition: 0.3s;
-}
-
-.social-links li a:hover i {
-    color: #222;
-    background-color: #fff;
+    -ms-transform: scale(1.25); /* IE */
+    -moz-transform: scale(1.25); /* FF */
+    -webkit-transform: scale(1.25); /* Safari and Chrome */
+    -o-transform: scale(1.25); /* Opera */
 }
 
 @media (max-width: 767px) {

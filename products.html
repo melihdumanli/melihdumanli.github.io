@@ -59,8 +59,33 @@
                                     <ul class="nav navbar-nav navbar-right">
                                         <li><a href="index.html">ANASAYFA</a></li>
                                         <li><a href="index.html">HAKKIMIZDA</a></li>
-                                        <li><a href="index.html">YAYINEVLERİ</a></li>
-                                        <li class="active"><a class="smooth_scroll" href="yayinlar.html">YAYINLAR</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                YAYINEVLERİ
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul id="products-menu" class="dropdown-menu">
+                                                <li><a href="products.html">Liderler Karması</a></li>
+                                                <li><a href="products.html">Kurul Yayıncılık</a></li>
+                                                <li><a href="products.html">Dinamo Yayınları</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                YAYINLAR
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul id="products-menu" class="dropdown-menu">
+                                                <li><a href="products.html">2. Sınıf</a></li>
+                                                <li><a href="products.html">3. Sınıf</a></li>
+                                                <li><a href="products.html">4. Sınıf</a></li>
+                                                <li><a href="products.html">5. Sınıf</a></li>
+                                                <li><a href="products.html">6. Sınıf</a></li>
+                                                <li><a href="products.html">LGS</a></li>
+                                                <li><a href="products.html">YKS-TYT</a></li>
+                                                <li><a href="products.html">YKS-AYT</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="index.html">YENİ ÜRÜNLER</a></li>
                                         <li><a href="index.html">İLETİŞİM</a></li>
                                     </ul>
@@ -75,7 +100,13 @@
 
     <section id="products" class="products-area section-xl">
         <div class="container">
+            <div id="content-title">
+                <p id="category-title">Tüm Yayınlar</p>
+            </div>
             <aside class="col-lg-3">
+                <div class="filter-header">
+                    Fitlrele
+                </div>
                 <div class="categories">
                     <p class="header">Kategoriler</p>
                     <div id="options">
@@ -206,8 +237,9 @@
                 </div>
             </aside>
             <div class="col-lg-9 content-container">
-                <div id="content-title">
-                    <p id="category-title">Tüm Yayınlar</p>
+                <div id="layout">
+                    <button class="btn" id="grid"><i class="fa fa-th" aria-hidden="true"></i>Kitaplık</button>
+                    <button class="btn" id="list" onclick="listLayout()"><i class="fa fa-list" aria-hidden="true"></i>Liste</button>
                 </div>
                 <div class="content">
                     <div id="lider-ayt" class="single-product">
@@ -311,6 +343,9 @@
                             <hr>
                             <p class="product-header">
                                 <b>TYT 3+2 Deneme</b>
+                            </p>
+                            <p class="product-meta text-muted">
+                                <b>Yayınevi: </b> Liderler Karması
                             </p>
                             <p class="product-meta text-muted">
                                 <b>Basım: </b> 2023
@@ -1468,8 +1503,29 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="selected-content">
+                <div class="selected-content">
+                </div>
+                <div class="no-results-found">
+                    <div class="wrap">
+                        <i class="fa fa-search search-1"></i>
+                        <i class="fa fa-search search-2"></i>
+                        <i class="fa fa-search search-3"></i>
+                        <i class="fa fa-search search-4"></i>
+                        <div class="items">
+                            <i class="fa fa-file-o"></i>
+                            <i class="fa fa-file-archive-o"></i>
+                            <i class="fa fa-file-audio-o"></i>
+                            <i class="fa fa-file-code-o"></i>
+                            <i class="fa fa-file-excel-o"></i>
+                            <i class="fa fa-file-image-o"></i>
+                            <i class="fa fa-file-pdf-o"></i>
+                            <i class="fa fa-file-powerpoint-o"></i>
+                            <i class="fa fa-file-video-o"></i>
+                            <i class="fa fa-file-word-o"></i>
+                        </div>
+                    </div>
+                    <h2>Aradığınız kriterlere uygun bir sonuç bulunamadı.</h2>
+                </div>
             </div>
         </div>
         </div>
@@ -1479,7 +1535,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <div class="section-title">
-                        <h2>İletişim</h2>
+                        <h2>İLETİŞİM</h2>
                     </div>
                 </div>
             </div>
@@ -1563,81 +1619,13 @@
     <!-- Main js-->
     <script src="assets/js/main_script.js"></script>
 
+    <script src="assets/js/productFilter.js"></script>
+
     <script>
-
-        function filterProducts() {
-            const categoryCheckboxes = document.querySelectorAll('.categories input[type=checkbox]');
-            const publisherCheckboxes = document.querySelectorAll('.filters input[type=checkbox]');
-            const products = document.querySelectorAll('.single-product');
-            const node = document.querySelector('.selected-content');
-            const content = document.querySelector('.content');
-
-            while (node.firstChild) {
-                node.removeChild(node.lastChild);
-            }
-
-            let selections = [];
-            let selectedProducts = [];
-
-            publisherCheckboxes.forEach(function (checkbox) {
-                if (checkbox.checked) {
-                    selections.push(checkbox.value);
-                }
-            });
-
-            if (selections.length > 0) {
-                categoryCheckboxes.forEach(function (checkbox) {
-                    if (checkbox.checked) {
-                        selections.forEach(function (selection) {
-                            selection.concat('-', checkbox.value)
-                        })
-                    }
-                })
-            } else {
-                categoryCheckboxes.forEach(function (checkbox) {
-                    if (checkbox.checked) {
-                        selections.push(checkbox.value);
-                    }
-                })
-            }
-
-            if (selections.length < 1) {
-                content.style.display = "block"
-                node.style.display = "none"
-                return
-            } else {
-                node.style.display = "block"
-            }
-
-            products.forEach(function (product) {
-                let cloneNode = product.cloneNode(true)
-                let filterValue = product.getAttribute('id');
-                selections.forEach(function (selection) {
-                    if (filterValue.includes(selection)) {
-                        selectedProducts.push(cloneNode)
-                    }
-                });
-            });
-
-            if (selectedProducts.length > 0) {
-                let childNode;
-                selectedProducts.forEach(function (product, index) {
-                    if (index % 3 === 0) {
-                        childNode = document.createElement('div');
-                        childNode.classList.add('row')
-                        node.appendChild(childNode)
-                    }
-                    childNode.appendChild(product)
-                });
-                content.style.display = "none";
-            }
-        }
-
         function widenCategories() {
             document.getElementById('options').style.height = "auto"
             document.getElementById('show-all').style.display = "none"
         }
-
     </script>
 
 </body>
