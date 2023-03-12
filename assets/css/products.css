@@ -1,4 +1,6 @@
-.navbar-nav li a {
+.navbar-nav li a,
+.navbar-nav li p,
+.navbar-nav li i {
   color: #00bcc6;
 }
 
@@ -12,6 +14,25 @@
 
 aside {
   margin-bottom: 50px;
+  padding-left: 0 !important;
+}
+
+@media(max-width: 401px) {
+  aside {
+    display: none;
+  }
+}
+
+section .container {
+  /* background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); */
+}
+
+.filter-header {
+  background: #fff;
+  box-shadow: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .categories, .filters {
@@ -20,7 +41,7 @@ aside {
   padding: 20px;
 }
 
-.filters {
+.categories, .filters {
   margin-top: 20px;
 }
 
@@ -98,10 +119,20 @@ aside {
   padding-right: 0;
 }
 
+#layout {
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 0px 8px 10px -10px #111;
+  background-color: #fff;
+}
+
 #content-title {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 10px;
+  margin-top: 60px;
+  margin-bottom: 20px;
   width: 100%;
   box-shadow: 0px 8px 10px -10px #111;
   background-color: #fff;
@@ -110,17 +141,17 @@ aside {
 #content-title p {
   font-size: 32px;
   font-weight: 600;
+  color: #00bcc6;
 }
 
-.content {
+.content, .selected-content {
   display: grid;
   grid-template-columns: auto auto auto;
-  column-gap: 20px;
 }
 
 @media(max-width: 401px) {
   .content {
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
   }
 }
 
@@ -141,13 +172,167 @@ aside {
   }
 }
 
-.product-image {
-  transition: transform .2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 1);
 }
 
-.product-image:hover {
-  transform: scale(1.75);
+.dropdown-menu li a:hover {
+  color: #333;
+}
+
+.no-results-found {
+  display: none;
+}
+
+.wrap {
+  margin: 50px auto 0;
+  width: 120px;
+  height: 100px;
+  position: relative;
+}
+
+.no-results-found h2 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 3em;
+  text-align: center;
+}
+
+div.items {
+  font-size: 50px;
+}
+
+div.items .fa {
+  position: absolute;
+  top: calc(50% - 0.4em);
+  left: calc(50% - 0.4em);
+  opacity: 0;
+}
+div.items .fa:nth-child(1) {
+  animation: slidefade 20s 0s infinite linear;
+}
+div.items .fa:nth-child(2) {
+  animation: slidefade 20s 2s infinite linear;
+}
+div.items .fa:nth-child(3) {
+  animation: slidefade 20s 4s infinite linear;
+}
+div.items .fa:nth-child(4) {
+  animation: slidefade 20s 6s infinite linear;
+}
+div.items .fa:nth-child(5) {
+  animation: slidefade 20s 8s infinite linear;
+}
+div.items .fa:nth-child(6) {
+  animation: slidefade 20s 10s infinite linear;
+}
+div.items .fa:nth-child(7) {
+  animation: slidefade 20s 12s infinite linear;
+}
+div.items .fa:nth-child(8) {
+  animation: slidefade 20s 14s infinite linear;
+}
+div.items .fa:nth-child(9) {
+  animation: slidefade 20s 16s infinite linear;
+}
+div.items .fa:nth-child(10) {
+  animation: slidefade 20s 18s infinite linear;
+}
+
+
+i.fa-search {
+  color: #a9afb9;
+  position: absolute;
+  z-index: 2;
+}
+
+i.search-1 {
+  font-size: 20px;
+  top: 5px;
+  left: 0;
+  top:-10px;
+  left:-15px;
+  animation: rotcw 5s infinite linear;
+}
+
+i.search-2 {
+  font-size: 12px;
+  top: 10px;
+  right: 15px;
+  top: -5px;
+  right: 0;
+  animation: rotcw 4s infinite linear;
+}
+
+i.search-3 {
+  font-size: 12px;
+  bottom: 0;
+  left: 5px;
+  bottom: -15px;
+  left: -10px;
+  animation: rotccw 4.4s infinite linear;
+}
+
+i.search-4 {
+  font-size: 20px;
+  bottom: -5px;
+  right: 0;
+  bottom: -20px;
+  right: -15px;
+  animation: rotccw 5.5s infinite linear;
+}
+
+
+/**
+ * Animations
+ */
+
+@keyframes slidefade {
+  0% {
+    opacity: 0;
+    transform: translate(50px, 0);
+  }
+  4.5% {
+    opacity: 1;
+    transform: translate(10px, 0);
+  }
+  10.5% {
+    opacity: 1;
+    transform: translate(-10px, 0);
+  }
+  15% {
+    opacity: 0;
+    transform: translate(-50px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(50px, 0);
+  }
+}
+
+@keyframes rotcw {
+  from {
+    transform: rotate(0deg) translate(5px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(5px) rotate(-360deg);
+  }
+}
+
+@keyframes rotccw {
+  from {
+    transform: rotate(0deg) translate(5px) rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg) translate(5px) rotate(360deg);
+  }
+}
+
+#layout .btn {
+  border-radius: 5px;
+}
+
+#layout i {
+  margin-right: 5px;
 }
